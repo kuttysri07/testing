@@ -35,7 +35,7 @@ const Card = () => {
                             <h1>{product.price}</h1>
                             <p>{product.description}</p>
                            <Link to={`/getimage/${product.category}`}><button>Add to Cart</button></Link> 
-                            <button>Wishlist</button>
+                           <Link to={`/admin`}><button>Admin</button></Link>   
                         </div>
                 </div>
                 ) 

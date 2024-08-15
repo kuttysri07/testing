@@ -1,0 +1,61 @@
+.Container{
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+  .cardcontainer{
+    display: flex;
+    background-color:#e5e5e5;
+    padding: 15px;
+    border-radius: 10px;
+    height: 300px;
+    width: 700px;
+    gap: 10px;
+  
+  }
+  .photo {
+    display: flex;
+    flex-basis: 40%;
+    align-items: center;
+  }
+  
+  .photo img{
+    
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    
+  }
+  
+  .description{
+    flex-basis: 70%;
+    width: 200px;
+  }
+  
+  
+  .description h2{
+    font-size: 1rem;
+    padding: 5px ;
+  }
+  
+  .description h4{
+    font-size: .8em;
+    padding: 0px 5px ;
+  }
+  
+  .description h1{
+    font-size: 2em;
+    padding: 0px 5px ;
+  }
+  
+  .description p{
+    font-size: .8em;
+    padding: 0px 5px ;
+  }
+  
+  .description  button{
+    padding: 3px 15px;
+    margin-left: 60px;
+  }

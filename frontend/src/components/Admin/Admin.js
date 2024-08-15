@@ -42,11 +42,22 @@ const App = () => {
         const response = await axios.post(`${API_URL}/upload`, formData)
         console.log(response.data);
         fetchImages();  // Fetch the updated list of images after a new upload
+          // Reset form fields
+        setCreateProduct({
+            name: '',
+            price: '',
+            description: '',
+            category: 'sarees' // Reset to the default category or choose as per your requirement
+        });
+
+        // Reset file input
+        setFile(null);
+
+      
     }
     catch(err){
        console.log({message:err.message});
     }
-    window.location="/admin"
 
     }
 
@@ -95,7 +106,8 @@ const App = () => {
                             <option value="electronics">Electronics</option>
                     </select> <br />
                     <label for="lname">Image:</label><br />
-                    <input type='file' onChange={(e) => setFile(e.target.files[0])} />
+                  <input type='file' id="fileInput" onChange={(e) => setFile(e.target.files[0])} />
+
             
             <button onClick={uploadHandler}>Upload</button>
             <br/>         

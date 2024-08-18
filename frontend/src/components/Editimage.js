@@ -9,7 +9,7 @@ const EditImage = ({ img }) => {
   const [description, setDescription] = useState(img.description);
   const [category,setCategory]=useState(img.category)
   const updateDescription = async () => {
-    console.log("Update button clicked");
+   
     try {
       const response = await axios.put(`${API_URL}/updateImage/${img._id}`, {
         name,
@@ -22,7 +22,7 @@ const EditImage = ({ img }) => {
       console.error('Error updating product:', error);
     }
 
-    window.location="/admin"
+   
   };
 
   return (

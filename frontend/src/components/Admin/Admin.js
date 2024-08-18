@@ -42,16 +42,7 @@ const App = () => {
         const response = await axios.post(`${API_URL}/upload`, formData)
         console.log(response.data);
         fetchImages();  // Fetch the updated list of images after a new upload
-          // Reset form fields
-        setCreateProduct({
-            name: '',
-            price: '',
-            description: '',
-            category: 'sarees' // Reset to the default category or choose as per your requirement
-        });
-
-        // Reset file input
-        setFile(null);
+        window.location("http://localhost:3000/admin")
 
       
     }

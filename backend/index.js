@@ -12,6 +12,7 @@ const productModel = require("./Model/productModel");
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public/images'))
+app.use(express.static(path.join(__dirname, 'frontend/build')));
 
 mongoose.connect("mongodb+srv://curljhonson07:Kuttysri07@todoapp.mrxzsi4.mongodb.net/image")
 .then(() => console.log("MongoDB connected"))
@@ -102,10 +103,18 @@ app.delete("/deleteImage/:id",async (req,res)=>{
 })
 
 
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
+});
+
 
 
 
 const Port = 8000;
 app.listen(Port ,()=>{
     console.log(`server is running on port ${Port}`)
+   
+    
 })

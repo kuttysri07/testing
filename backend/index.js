@@ -116,9 +116,4 @@ const Port = 8000;
 app.listen(Port ,()=>{
     console.log(`server is running on port ${Port}`)
    
-    
-<<<<<<< HEAD
-})
-=======
-})
->>>>>>> cbb14782f542dc5e4bf274dad1e33069b04c6e51
+}

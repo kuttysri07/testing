@@ -51,7 +51,7 @@ const App = () => {
             document.getElementById('fileInput').value = '';
 
             // Redirect to the admin page (optional)
-            window.location.href = "/admin";  // Ensure this URL matches your actual route
+            window.location.href = "https://testing-1-0d6u.onrender.com/admin";  // Ensure this URL matches your actual route
 
         } catch (err) {
             console.log({ message: err.message });

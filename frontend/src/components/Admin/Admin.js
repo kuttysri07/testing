@@ -43,16 +43,7 @@ const App = () => {
         console.log(response.data);
         fetchImages();  // Fetch the updated list of images after a new upload
           // Reset form fields
-        setCreateProduct({
-            name: '',
-            price: '',
-            description: '',
-            category: 'sarees' // Reset to the default category or choose as per your requirement
-        });
-
-        // Reset file input
-        setFile(null);
-
+         window.location="https://testing-1-0d6u.onrender.com/admin" 
       
     }
     catch(err){
